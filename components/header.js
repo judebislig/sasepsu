@@ -7,7 +7,7 @@ class Header extends HTMLElement {
     this.innerHTML = `
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <!-- Nav Title -->
-      <a href="#" class="logo-background"
+      <a href="index.html" class="logo-background"
         ><img src="images/sase-logo.png" class="logo"
       /></a>
       <button
@@ -26,7 +26,7 @@ class Header extends HTMLElement {
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link text-dark" href="#"
+            <a class="nav-link text-dark" href="index.html"
               >Home <span class="sr-only">(current)</span></a
             >
           </li>
@@ -43,7 +43,7 @@ class Header extends HTMLElement {
               Community
             </a>
             <div class="dropdown-menu" aria-labelledby="defaultDropdown">
-              <a class="dropdown-item" href="#">Executive Board</a>
+              <a class="dropdown-item" href="eboard.html">Executive Board</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Gallery</a>
               <div class="dropdown-divider"></div>
