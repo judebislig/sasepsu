@@ -45,13 +45,13 @@ class Header extends HTMLElement {
             <div class="dropdown-menu" aria-labelledby="defaultDropdown">
               <a class="dropdown-item" href="eboard.html">Executive Board</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Gallery</a>
+              <a class="dropdown-item" href="gallery.html">Gallery</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">FAQ</a>
+              <a class="dropdown-item" href="faq.html">FAQ</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark" href="#">Conference</a>
+            <a class="nav-link text-dark" href="conference.html">Conference</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-dark" href="#">Upcoming Events</a>

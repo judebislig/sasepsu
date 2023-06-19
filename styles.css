@@ -309,17 +309,15 @@ footer a img {
 
 /* Executive Board Page */
 
-.exec-hero {
+.side-hero {
     width: 100%;
-    height: 200px;
     background-color: #2d4f78;
     align-items: center;
-    display: flex;
     padding: 5%;
 }
 
-.exec-hero h1 {
-    color: #90dfa5;
+.side-hero h1 {
+    color: #79b1ff;
     font-size: 3rem;
 }
 
@@ -351,8 +349,8 @@ footer a img {
 
 .section1 img {
     border-radius: 50%;
-    height: 130px;
-    width: 130px;
+    height: 150px;
+    width: 150px;
 }
 
 .section2 h5 {
@@ -380,4 +378,119 @@ footer a img {
 .exec-icon {
     color: black;
     font-size: 1.5rem;
+}
+
+
+/* Conference Page */
+
+
+.carousel-conference-item {
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.conference-image-holder {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.carousel-conference-img {
+    height: 180px;
+    width: 180px;
+    margin: 5%;
+    border-radius: 50%;
+}
+
+.testimonial-div {
+    padding: 5%;
+}
+
+.about-conference {
+    padding: 5%;
+}
+
+.about-conference-div {
+    display: flex;
+}
+
+.about-conference-div div{
+    width: 50%;
+    margin-right: 5%;
+}
+
+.about-conference-div h4 {
+    margin-right: 100px;
+    font-weight: 400;
+}
+
+iframe {
+    width: 45%;
+}
+
+/* Features */
+
+.conference-features-section {
+    background-color: white;
+    padding: 5%;
+}
+
+.side-hero h4 {
+    color: rgb(238, 236, 236);
+}
+
+.conference-features-div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.conference-features-div div {
+    width: 30%;
+    text-align: center;
+}
+
+.conference-features-div div p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.conference-gallery-section {
+    padding: 5%;
+}
+
+.conference-gallery {
+    background-color: white;
+    display: inline-block;
+    border: white 10px solid;
+    text-align: center;
+}
+
+.conference-image {
+    height: 250px;
+    margin: 10px;
+}
+
+.conference-button-holder {
+    text-align: center;
+    background-color: white;
+    padding: 25px;
+}
+
+.conference-button {
+    background-color: #243c4f;
+    color: white;
+}
+
+
+/* Gallery Page */
+
+.gallery-section {
+    height: 100vh;
+}
+
+
+/* FAQ Page */
+
+.faq-section {
+    height: 100vh;
 }
