@@ -239,11 +239,26 @@ figure {
     background-color: rgb(243, 243, 243);
     padding: 0;
     display: flex;
+    justify-content: space-between;
 }
 
 .signup-div {
-    width: 65%;
     padding: 5%;
+    display: flex;
+    width: 60%;
+}
+
+.signup-div-img {
+    width: 40%;
+}
+
+.signup-div div {
+    margin-right: 5%;
+}
+
+.qr-img {
+    border: 5px solid black;
+    height:120%;
 }
 
 .newsletter .content {
@@ -404,6 +419,7 @@ footer a img {
 
 .testimonial-div {
     padding: 5%;
+    width: 60%;
 }
 
 .about-conference {
