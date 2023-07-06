@@ -12,11 +12,12 @@
 
     <!-- Bootstrap and CSS -->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" type="text/css" href="styles.css" />
 
     <!-- Google fonts -->
@@ -47,22 +48,320 @@
 
     <!-- FAQ Section -->
     <section class="faq-section">
-      <h2>What is SASE?</h2>
-      <h2>What does SASE do?</h2>
-      <h2>What do I need to do to be considered an active member?</h2>
-      <h2>What are the dues?</h2>
-      <h2>What is the point system and how can I earn points?</h2>
-      <h2>What are the benefits of being an active member?</h2>
-      <h2>What is National Conference?</h2>
-      <h2>How can I be chosen to go to National Conference?</h2>
-      <h2>What is NERC?</h2>
-      <h2>What are the difference between the two?</h2>
+      <div class="accordion" id="accordionExample">
+        <!-- General FAQ -->
+        <h3 class="pb-3">General</h3>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              What is SASE?
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              SASE is the Society of Asian Scientists and Engineers. Founded in
+              2007, this organization helps Asian heritage students and
+              professionals achieve their full potential while also promoting
+              diversity and inclusion.. There are chapters of SASE across many
+              different universities, including the Pennsylvania State
+              University.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              What does SASE do?
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              SASE organizes various events, such as conferences, career fairs,
+              workshops, and networking opportunities, where members can connect
+              with professionals, industry leaders, and like-minded individuals.
+              These events provide valuable resources for career development,
+              mentorship, and building professional connections. Additionally,
+              SASE offers scholarships, leadership development programs, and
+              other initiatives to support its members throughout their
+              educational and professional journeys. The organization is
+              dedicated to empowering Asian heritage scientists and engineers
+              and fostering their success in the STEM (Science, Technology,
+              Engineering, and Mathematics) fields.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              What are the dues?
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Dues for club membership are $10 per semester, or $15 per year.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
+              What is the point system and how can I earn points?
+            </button>
+          </h2>
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFour"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              The point system is a way to track how active a member is in SASE.
+              By simply attending GBM's, workshops, socials, and other club
+              events, you are able to earn points in an easy way.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive"
+            >
+              What do I need to do to be considered an active member?
+            </button>
+          </h2>
+          <div
+            id="collapseFive"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFive"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              To be considered an active member, all you need to do is pay dues
+              and attend any SASE events you can! The more active you are, the
+              more you'll be able to network with others, form friendships, and
+              hone your professional skills.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSix">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSix"
+              aria-expanded="false"
+              aria-controls="collapseSix"
+            >
+              What are the benefits of being an active member?
+            </button>
+          </h2>
+          <div
+            id="collapseSix"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingSix"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Being an active member gives you automatic discounts to various
+              places downtown, elgibility to run for E-Board positions, and one
+              of the first chosen to go to National and Regional Conference. You
+              also have the opportunity to apply to be a chair for the Events
+              Director as well, gaining leadership experience in the process.
+            </div>
+          </div>
+        </div>
+
+        <!-- Conference FAQ -->
+        <h3 class="pt-3 pb-3">Conference</h3>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSeven">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSeven"
+              aria-expanded="false"
+              aria-controls="collapseSeven"
+            >
+              What is National Conference?
+            </button>
+          </h2>
+          <div
+            id="collapseSeven"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingSeven"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              The National Conference is an annual event organized by SASE in
+              the United States. It is the largest gathering of Asian heritage
+              scientists and engineers, providing a platform for networking,
+              professional development, and knowledge sharing. The conference
+              features keynote speeches from industry leaders, workshops,
+              panels, a career fair, networking events, and competitions.
+              Attendees have the opportunity to connect with peers,
+              professionals, and recruiters, explore job and internship
+              opportunities, enhance their professional skills, and receive
+              mentorship. The SASE National Conference promotes diversity,
+              inclusion, and empowerment within the STEM community and serves as
+              an inspiring and supportive environment for Asian heritage
+              scientists and engineers to thrive.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingEight">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseEight"
+              aria-expanded="false"
+              aria-controls="collapseEight"
+            >
+              How can I be chosen to go to National Conference?
+            </button>
+          </h2>
+          <div
+            id="collapseEight"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingEight"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              To be chosen to go to National Conference, you must go through our
+              application process. The application form is available on the SASE
+              Instagram or GroupMe, or you can visit our
+              <a href="conference.html">Conference</a>
+              page for more details. The more active you are in the
+              organization, the more likely we are to consider you for
+              Nationals! Registration opens up in the summer.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingNine">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseNine"
+              aria-expanded="false"
+              aria-controls="collapseNine"
+            >
+              What is NERC?
+            </button>
+          </h2>
+          <div
+            id="collapseNine"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingNine"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              The NorthEast Regional Conference (NERC) is the largest of the
+              SASE regional conferences, consistently averaging approximately
+              500 students in attendance. It is the only regional conference to
+              be planned and hosted exclusively by the Northeast Region as a
+              collective of volunteers—a team of 16 students & alumni alongside
+              the Regional Programing Coordinator— as opposed to a team at a
+              single university. It offers a diverse variety of workshops,
+              keynote speakers, networking events, and a career fair. These
+              programs focus on educating and training AAPI students and
+              professionals to empower our community to strive for diversity,
+              inclusion, and in AAPI leadership in the workplace and beyond.
+              Registration opens up in the spring!
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTen">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTen"
+              aria-expanded="false"
+              aria-controls="collapseTen"
+            >
+              What are the difference between the two types of conference?
+            </button>
+          </h2>
+          <div
+            id="collapseTen"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTen"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              National Conference is held in the fall, where SASE members and
+              chapters from all around the country attend. NERC is held in the
+              spring, and exclusive to SASE chapters and members in the
+              Northeastern region, so it is smaller in scale.
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer Section -->
     <footer-sase></footer-sase>
 
     <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

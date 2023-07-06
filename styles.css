@@ -250,6 +250,7 @@ figure {
 
 .signup-div-img {
     width: 40%;
+    overflow-x: hidden;
 }
 
 .signup-div div {
@@ -508,5 +509,14 @@ iframe {
 /* FAQ Page */
 
 .faq-section {
+    margin: 5% 10%;
+}
+
+.accordion-button {
+    font-size: 1.2rem;
+}
+
+/* Upcoming Events Page */
+.events-section {
     height: 100vh;
 }

@@ -27,7 +27,7 @@ class Header extends HTMLElement {
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link text-dark" href="index.html"
-              >Home <span class="sr-only">(current)</span></a
+              >Home <span class="sr-only"></span></a
             >
           </li>
           <li class="nav-item dropdown">
@@ -54,7 +54,7 @@ class Header extends HTMLElement {
             <a class="nav-link text-dark" href="conference.html">Conference</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark" href="#">Upcoming Events</a>
+            <a class="nav-link text-dark" href="events.html">Upcoming Events</a>
           </li>
         </ul>
       </div>
