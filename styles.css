@@ -518,5 +518,13 @@ iframe {
 
 /* Upcoming Events Page */
 .events-section {
-    height: 100vh;
+    text-align: center;
+    background-color: white;
+}
+
+.calendar {
+    border: solid 2px #293057;
+    width: 800px;
+    height: 600px;
+    margin: 5% 0 0 0;
 }
