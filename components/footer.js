@@ -19,7 +19,7 @@ class Footer extends HTMLElement {
       </div>
       <a href="index.html"><img src="images/sase-logo.png" alt=""> </a> 
       <br><br>
-      <p>Society of Asian Scientists and Engineers © 2023 </iconify-icon></p>
+      <p>Society of Asian Scientists and Engineers © <script>document.write( new Date().getFullYear() );</script> </iconify-icon></p>
       
     </footer>
       `;

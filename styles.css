@@ -505,6 +505,17 @@ iframe {
     color: white;
 }
 
+.conference-status-div-active {
+    padding: 5px 40px;
+    background-color: rgb(199, 255, 199);
+    font-size: 1.2rem;
+}
+
+.conference-status-div-closed {
+    padding: 5px 40px;
+    background-color: rgb(255, 201, 199);
+    font-size: 1.2rem;
+}
 
 /* Gallery Page */
 
