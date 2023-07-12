@@ -651,6 +651,14 @@ iframe {
    .carousel-img {
     height: 150px;
    }
+
+   .side-hero h1 {
+    font-size: 2rem;
+   }
+
+   .side-hero {
+    text-align: center;
+   }
 }
 
 @media only screen and (max-width: 480px) {
