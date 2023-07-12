@@ -56,6 +56,7 @@ figure {
 
 .about-section {
     background-color: rgb(243, 243, 243);
+    padding: 5% 0;
 }
 
 .about-div {
@@ -139,6 +140,7 @@ figure {
     display:flex;
     font-family: 'Handlee', cursive;
     color: black;
+    text-align: center;
 }
 
 .event-details:hover {
@@ -601,6 +603,10 @@ iframe {
         font-size: 1.8rem;
     }
     
+    .about-section {
+        padding: 0;
+    }
+
     .sponsor-section {
         display: flex;
         flex-direction: column;
@@ -608,25 +614,39 @@ iframe {
 
     .sponsor-info-div {
         width: 100%;
+        padding: 40px;
     }
 
     .carousel-div {
         width: 100%;
         padding: 5% 0;
     }
-}
 
-@media only screen and (max-width: 576px) {
     .about2-section {
         display: flex;
         flex-direction: column;
     }
-   
+    
     .conference-photo {
         width: 90%;
-        margin-left: 0;
-        margin-top: 20px;
+        margin: 20px 0;
     }
+}
+
+@media only screen and (max-width: 576px) {
+    .contact-section {
+        margin: 20px 0;
+    }
+   
+    .signup-div {
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+   }
+
+   .qr-img {
+    margin-top: 20px;
+   }
 }
 
 @media only screen and (max-width: 480px) {
