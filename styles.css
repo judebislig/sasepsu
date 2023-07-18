@@ -631,6 +631,62 @@ iframe {
         width: 90%;
         margin: 20px 0;
     }
+
+    .side-hero {
+        text-align: center;
+    }
+
+    .side-hero h4 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .conference-status-div-active, .conference-status-div-closed {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .testimonial-div h4 {
+        font-size: 1.1rem;
+    }
+
+    .about-conference-div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-conference-div div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-conference-div div h4 {
+        margin: 3% auto;
+        font-size: 1.2rem;
+    }
+
+    .about-conference-div a {
+        font-size: 1.2rem;
+    }
+
+    .about-conference-div iframe {
+        width: 100%;
+        height: 400px;
+    }
+
+    .conference-features-div {
+        flex-direction: column;
+    }
+
+    .conference-features-div div {
+        width: 100%;
+    }
+
+    .conference-features-div div p {
+        font-size: 1rem;
+        margin: 0px 50px 50px 50px;
+    }
 }
 
 @media only screen and (max-width: 576px) {
@@ -662,5 +718,76 @@ iframe {
 }
 
 @media only screen and (max-width: 480px) {
-    
+    .conference-status-div-active,
+        .conference-status-div-closed {
+            font-size: 0.7rem;
+            text-align: center;
+            padding: 0%;
+        }
+
+    .conference-image-holder {
+        flex-direction: column-reverse;
+    }
+
+    .conference-image-holder img {
+        width: 80px;
+        height: 80px;
+        margin: 20px auto;
+    }
+
+    .testimonial-div {
+        margin: auto;
+        width: 90%;
+        text-align: center;
+    }
+
+    .testimonial-div h4 {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-div p {
+        font-size: 0.8rem;
+    }
+
+    .testimonial-div br {
+        display: none;
+    }
+
+    .about-conference-div div h4 {
+        margin: auto;
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .about-conference-div a {
+        font-size: 1rem;
+    }
+
+    .about-conference-div iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    .conference-features-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .conference-features-div h3 {
+        font-size: 1.2rem;
+    }
+
+    .conference-features-div div p {
+        font-size: 0.8rem;
+        margin: 0 0 20px 0;
+    }
+
+    .conference-gallery-section h1 {
+        text-align: center;
+    }
+
+    .conference-image {
+        height: 150px;
+        margin: 2px;
+    }
 }
