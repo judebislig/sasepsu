@@ -10,9 +10,10 @@ EXECUTIVE BOARD PAGE (eboard.html)
  - Exec board cards [line ~55]: This whole page will change aside from the adviser when there is a new eboard. In this page there are divs (class = "team-card") which hold the info for each member. Simple change the image src and replace the image in images/eboard, change the h3 to the new name, and the <p> tag with the new major and year. Also change the <a> with the new email (and also change the mailto: with the new email as well). Also replace the links for the icons for email, linkedin, and instagram with the new links.
 
 GALLERY PAGE (gallery.html)
- - Change the image links to the new images. 
+ - Change the image links to the new images. Change text to match events (title and date)
+ - MAKE SURE IMAGES ARE SQUARE (Equal width and height) to ensure they fit in the container divs.
  - Hero [line ~45] Also change the year to the current year.
- - Thinking of adding drop downs for each event displayed - showing only a couple of images and adding a link to Google Photos/Photocircle
+ - Update the link to the photocircle/Google photos
 
 FAQ PAGE (faq.html)
  - This should not change. If it needs to, just update the text/questions to what you need.
