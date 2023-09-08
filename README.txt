@@ -13,7 +13,7 @@ GALLERY PAGE (gallery.html)
  - Change the image links to the new images. Change text to match events (title and date)
  - MAKE SURE IMAGES ARE SQUARE (Equal width and height) to ensure they fit in the container divs.
  - Hero [line ~45] Also change the year to the current year.
- - Update the link to the photocircle/Google photos
+ - Update the link to the photocircle
 
 FAQ PAGE (faq.html)
  - This should not change. If it needs to, just update the text/questions to what you need.
