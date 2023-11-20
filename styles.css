@@ -350,7 +350,6 @@ footer a img {
     color: #424665;
     line-height: 1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    height: 600px;
 }
 
 .exec-alt-border {
@@ -570,6 +569,37 @@ iframe {
     margin: 5% 0 0 0;
 }
 
+
+/* SASE COMMONWEALTH */
+
+.commonwealth-about {
+    background-color: white;
+    padding: 5%;
+}
+
+.connect-box {
+    padding: 3%;
+    margin: 2.5% 5% 2.5% 5%;
+    border-radius: 2px;
+    border-left: 6px solid #424665;
+    background-color: #FFFFFF;
+    color: #424665;
+    line-height: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.connect-box img {
+    height: 200px;
+
+}
+
+.connect-box div {
+    margin-left: 3%;
+}
+
 /* General Media Queries */
 
 @media only screen and (max-width: 1450px) {
@@ -623,6 +653,7 @@ iframe {
     .qr-img {
         height: 200px;
     }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -630,6 +661,10 @@ iframe {
         font-size: 1.8rem;
     }
     
+    h4 {
+        font-size: 1.2rem;
+    }
+
     .about-section {
         padding: 0;
     }
@@ -664,17 +699,12 @@ iframe {
     }
 
     .side-hero h4 {
-        font-size: 1.2rem;
         text-align: center;
     }
 
     .conference-status-div-active, .conference-status-div-closed {
         font-size: 0.9rem;
         text-align: center;
-    }
-
-    .testimonial-div h4 {
-        font-size: 1.1rem;
     }
 
     .about-conference-div {
@@ -690,7 +720,6 @@ iframe {
 
     .about-conference-div div h4 {
         margin: 3% auto;
-        font-size: 1.2rem;
     }
 
     .about-conference-div a {
@@ -713,6 +742,18 @@ iframe {
     .conference-features-div div p {
         font-size: 1rem;
         margin: 0px 50px 50px 50px;
+    }
+
+    .commonwealth-about h2 {
+        font-size: 1.8rem;
+    }
+
+    .connect-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .connect-box p {
+        font-size: 1rem;
     }
 }
 
@@ -740,6 +781,30 @@ iframe {
    }
 
    .side-hero {
+    text-align: center;
+   }
+
+   .connect-box {
+    flex-direction: column;
+    border: none;
+    border-top: 6px solid #424665;
+    border-bottom: 30px solid #424665;
+    margin-bottom: 5%;
+   }
+
+   .connect-box img {
+    width: 90%;
+    height: 90%;
+    padding: 5% 0;
+   }
+
+   .connect-box h3 {
+    font-size: 1.5rem;
+    text-align: center;
+   }
+
+   .connect-box div {
+    margin: 5px;
     text-align: center;
    }
 }
@@ -816,5 +881,23 @@ iframe {
     .conference-image {
         height: 150px;
         margin: 2px;
+    }
+
+    .commonwealth-about h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .commonwealth-about h4 {
+        font-weight: lighter;
+        text-align: center;
+    }
+
+    .connect-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .connect-box p {
+        font-size: 0.8rem;
     }
 }

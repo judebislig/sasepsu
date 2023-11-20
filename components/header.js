@@ -48,6 +48,8 @@ class Header extends HTMLElement {
               <a class="dropdown-item" href="gallery.html">Gallery</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="faq.html">FAQ</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="commonwealth.html">SASE Commonwealth Connect</a>
             </div>
           </li>
           <li class="nav-item">
