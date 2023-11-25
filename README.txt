@@ -27,4 +27,7 @@ CONFERENCE PAGE (conference.html)
 UPCOMING EVENTS (events.html)
  - Calendar [line ~51]: Only change the calendar link but keep the same class=calendar. Look online how to embed a Google calendar with html if the calendar needs to be changed to a different one.
 
+SASE COMMONWEALTH CONNECT
+ - Contacts [line ~54]: Change images and information for each person for the new year!
+
 And you are done! Good luck for the year :) If anything else on the website needs to be changed you can also do so, but these are just the essential things I think would need to be updated with each new school year.
