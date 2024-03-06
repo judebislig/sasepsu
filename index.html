@@ -31,6 +31,72 @@
     <!-- Linking components -->
     <script src="components/header.js" type="text/javascript" defer></script>
     <script src="components/footer.js" type="text/javascript" defer></script>
+
+    <!-- GOOGLE-API-->
+
+    <script>
+      window.onload = function() {
+        updateLeaderboard();
+      };
+
+      const SHEETDB_URL = 'https://sheetdb.io/api/v1/b3bsiznptpcnm'
+
+      async function updateLeaderboard() {
+        try {
+            const response = await fetch(SHEETDB_URL);
+            const data = await response.json();
+
+            const topMembers = findTopMembers(data);
+            console.log(topMembers);
+
+            const leaderData = [
+              {year: '1st Year', name: topMembers[1]["First Name"] + ' ' + topMembers[1]["Last Name"], points: topMembers[1]["Point Count"]},
+              {year: '2nd Year', name: topMembers[2]["First Name"] + ' ' + topMembers[2]["Last Name"], points: topMembers[2]["Point Count"]},
+              {year: '3rd Year', name: topMembers[3]["First Name"] + ' ' + topMembers[3]["Last Name"], points: topMembers[3]["Point Count"]},
+              {year: '4th Year', name: topMembers[4]["First Name"] + ' ' + topMembers[4]["Last Name"], points: topMembers[4]["Point Count"]},
+              {year: '5th Year', name: topMembers[5]["First Name"] + ' ' + topMembers[5]["Last Name"], points: topMembers[5]["Point Count"]},
+            ];
+
+            leaderData.forEach((leader, index) => {
+              const leaderName = document.querySelector(`.list-item:nth-child(${index + 1}) .leader-name`);
+              const leaderScore = document.querySelector(`.list-item:nth-child(${index + 1}) .leader-score`);
+              leaderName.textContent = `${leader.year} - ${leader.name}`;
+              leaderScore.textContent = leader.points; 
+            });
+
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+
+    function findTopMembers(data) {
+        const highestPointMembers = {};
+        const yearGroupedMembers = {};
+
+        data.forEach(member => {
+            const year = member["Year"];
+            if (year) {
+                if (!yearGroupedMembers[year]) {
+                    yearGroupedMembers[year] = [];
+                }
+                yearGroupedMembers[year].push(member);
+            }
+        });
+
+        for (const year in yearGroupedMembers) {
+            const memberOfYear = yearGroupedMembers[year];
+            const highestPointMember = memberOfYear.reduce((prev, current) => {
+                return (Number(current["Point Count"]) > Number(prev["Point Count"])) ? current : prev;
+            });
+            highestPointMembers[year] = highestPointMember;
+        }
+
+        return highestPointMembers;
+    }
+
+    setInterval(updateLeaderboard, 43200000);
+    </script>
+
   </head>
 
   <body>
