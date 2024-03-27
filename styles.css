@@ -522,6 +522,11 @@ iframe {
     display: flex;
 }
 
+.semHeader {
+    margin-top: 5%;
+    text-align: center;
+}
+
 .gallery-box {
     border-radius: 2px;
     margin: 0px;
@@ -753,6 +758,10 @@ iframe {
     }
 
     .connect-box p {
+        font-size: 1rem;
+    }
+
+    .event-desc {
         font-size: 1rem;
     }
 }
