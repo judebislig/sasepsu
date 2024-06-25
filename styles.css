@@ -363,6 +363,10 @@ footer a img {
 .section1 img {
     /* border-radius: 50%; */
     width: 90%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    
 }
 
 .section2 h5 {
@@ -376,6 +380,9 @@ footer a img {
 
 .section2 a {
     line-height: 1;
+}
+.section2 h3{
+    font-size: 1.6rem;
 }
 
 .section3 {
