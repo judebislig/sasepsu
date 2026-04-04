@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>SASE - The Pennsylvania State University</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <!-- Bootstrap and CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Indie+Flower&family=PT+Sans&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <!-- Linking components -->
+    <script src="components/header.js" type="text/javascript" defer></script>
+    <script src="components/footer.js" type="text/javascript" defer></script>
+  </head>
+
+  <body class="exec-page">
+    <!-- Nav bar -->
+    <header-sase></header-sase>
+
+    <!-- Hero -->
+    <div class="side-hero">
+      <h1><strong>National Conference 2025</strong></h1>
+      <h4>October 1-4 | Pittsburg, PA | David L. Lawrence Convention Center</h4>
+    </div>
+    <!-- Hero -->
+
+    <!-- Conference Status Div -->
+    <!-- MAKE SURE TO HAVE ONLY ONE OF THESE DISPLAYED. COMMENT OUT THE ONE NOT USED -->
+    <!-- Conference Form Active -->
+    <!--<div class="conference-status-div-active">
+      <a
+        href="https://docs.google.com/forms/d/1Q6ri1KDp-X0uZNQLAMKzCNFcmOEG4YHBPQ3QNbBjeJQ/viewform?edit_requested=true"
+        >Click here
+      </a>
+      to apply to the 2024 SASE National Conference.
+      Applications are due July 7, 2023. -->
+    </div> 
+    <!-- Conference Form Closed -->
+    <div class="conference-status-div-closed">
+      Unfortunately applications for this year's National Conference are now
+      closed. Don't forget to look out for NERC in the spring!
+    </div>
+
+    <!-- Testimonials from past members-->
+    <section class="testimonial-section">
+      <div class="carousel-conference-div">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-ride="carousel"
+          data-interval="5000"
+        >
+          <div class="carousel-inner">
+            <!-- Testimonial Divs -->
+            <div class="carousel-conference-item carousel-item active">
+              <div class="conference-image-holder">
+                <div class="testimonial-div">
+                  <h4 class="font-italic text-secondary">
+                    "Seeing the hundreds of bright and talented students achieve
+                    monumental life and career goals that weekend truly defined
+                    success in my personal dictionary."
+                  </h4>
+                  <br />
+                  <p class="text-secondary">- Emanual Kim</p>
+                  <p class="text-secondary">
+                    SASE Alum, Systems Engineer at Boeing
+                  </p>
+                </div>
+                <img
+                  class="d-block carousel-conference-img"
+                  src="images/conference-2023/testimonial1.jpeg"
+                  alt="First slide"
+                />
+              </div>
+            </div>
+
+            <div class="carousel-conference-item carousel-item">
+              <div class="conference-image-holder">
+                <div class="testimonial-div">
+                  <h4 class="font-italic text-secondary">
+                    "Easiest and quickest offer I've ever received"
+                  </h4>
+                  <br />
+                  <p class="text-secondary">- Jimmy Sek</p>
+                  <p class="text-secondary">
+                    SASE Alum, Full-Time Analyst at Accenture
+                  </p>
+                </div>
+                <img
+                  class="d-block carousel-conference-img"
+                  src="images/eboard/VicePresident.jpg"
+                  alt="First slide"
+                />
+              </div>
+            </div>
+            <div class="carousel-conference-item carousel-item">
+              <div class="conference-image-holder">
+                <div class="testimonial-div">
+                  <h4 class="font-italic text-secondary">
+                    “The connections I made at conference gave me lasting friendships, leadership advice, and interview offers! I was able to interview with 5 different companies in just a few days.”
+                  </h4>
+                  <br />
+                  <p class="text-secondary">- Megan Aquias</p>
+                  <p class="text-secondary">
+                    SASE Alum, Industrial Engineer at Boeing
+                  </p>
+                </div>
+                <img
+                  class="d-block carousel-conference-img"
+                  src="images/conference-2023/testimonial2.jpeg"
+                  alt="First slide"
+                />
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleControls"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleControls"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is conference? (About and expectations, why should I go) -->
+    <section class="about-conference">
+      <div class="about-conference-div">
+        <div>
+          <h1 class="mb-5"><strong>What is National Conference?</strong></h1>
+          <h4>
+            The SASE National Conference is a valuable opportunity for personal
+            and professional development, which includes networking with
+            world-leading STEM companies, building 1-on-1 connections with
+            recruiters before the career fair, and instant interviews and
+            potential on-the-spot job offers!
+          </h4>
+
+          <br />
+          <h4>
+            For questions related to The Pennsylvania State University Chapter, contact our Conference Director to learn more:
+            <a
+              
+              href="mailto:sasepsu.conference@gmail.com"
+              >sasepsu.conference@gmail.com</a
+            >
+          </h4>
+        </div>
+        <iframe 
+          src="https://youtube.com/embed/vGh460W8Gtc" 
+          title="SASE NATIONAL CONFERENCE RECAP &#39;25 PENN STATE" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+        
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="conference-features-section">
+      <h1 class="mb-5 text-center"><strong>What it offers...</strong></h1>
+      <div class="conference-features-div">
+        <div>
+          <img
+            class="conference-features-img"
+            src="images/conference-2023/careerfair.jpg"
+            alt=""
+          />
+          <h3>Career Fair</h3>
+          <br />
+          <p>
+            Connect with recruiters and explore companies and government
+            organizations with job and career opportunities. These opportunities
+            are endless, with many available internships, co-ops, jobs, and
+            more!
+          </p>
+        </div>
+        <div>
+          <img
+            class="conference-features-img"
+            src="images/conference-2023/panels.png"
+            alt=""
+          />
+          <h3>Panels and Workshops</h3>
+          <br />
+          <p>
+            National Conference provides many different workshops, panels, and
+            other networking events for its attendees, making it a great way to
+            polish up on your resume, pitching skills, or simply connecting with
+            fellow attendees or recruiters!
+          </p>
+        </div>
+        <div>
+          <img
+            class="conference-features-img"
+            src="images/conference-2023/sasehack.JPG"
+            alt=""
+          />
+          <h3>SASEHack</h3>
+          <br />
+          <p>
+            SASEhack is a fun, open-to-all event that invites students to
+            collaborate on designing solutions to real-world challenges!
+            Participants learn new skills, connect with experts, apply new
+            technologies, and face challenges within a unique online
+            environment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- List jobs that people got from previous years -->
+
+    <!-- Carousel gallery of images below -->
+    <section class="conference-gallery-section">
+      <h1>Check out our memories from this year's conference!</h1>
+      <br />
+      <!-- REPLACE WITH IMAGES FROM THE PREVIOUS CONFERENCE -->
+      <div class="conference-gallery">
+        <img
+          class="conference-image"
+          src="images/conference-2025/conference-2025-1.jpg"
+          alt=""
+        />
+        <img
+          class="conference-image"
+          src="images/conference-2025/conference-2025-2.jpg"
+          alt=""
+        />
+        <img
+          class="conference-image"
+          src="images/conference-2025/conference-2025-3.jpg"
+          alt=""
+        />
+        <img
+          class="conference-image"
+          src="images/conference-2025/conference-2025-4.jpg"
+          alt=""
+        />
+        <img
+          class="conference-image"
+          src="images/conference-2025/conference-2025-5.jpg"
+          alt=""
+        />
+        <img
+          class="conference-image"
+          src="images/conference-2025/conference-2025-6.jpg"
+          alt=""
+        />
+        <img
+          class="conference-image"
+          src="images/conference-2025/conference-2025-7.jpg"
+          alt=""
+        />
+        <img
+          class="conference-image"
+          src="images/conference-2025/conference-2025-8.jpg"
+          alt=""
+        />
+        <img
+          class="conference-image"
+          src="images/conference-2025/conference-2025-9.jpg"
+          alt=""
+        />
+        <img
+          class="conference-image"
+          src="images/conference-2025/conference-2025-10.jpg"
+          alt=""
+        />
+        <img
+          class="conference-image"
+          src="images/conference-2025/conference-2025-11.jpg"
+          alt=""
+        />
+        <!-- <img
+          class="conference-image"
+          src="images/conference-2024/conference-2024-12.jpg"
+          alt=""
+        />
+        <img
+          class="conference-image"
+          src="images/conference-2024/conference-2024-13.jpg"
+          alt=""
+        /> -->
+      </div>
+      <div class="conference-button-holder">
+        <a href="gallery.html"
+          ><button type="button" class="btn btn-lg conference-button">
+            See All Events
+          </button></a
+        >
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <br>
+      <div>
+        <a href="https://instagram.com/sasepsu?igshid=MzRlODBiNWFlZA==">
+          <iconify-icon icon="mdi:instagram"></iconify-icon></i></a>
+        <a href="https://www.linkedin.com/in/sase-penn-state-96b63b26a/"
+          ><iconify-icon icon="mdi:linkedin"></iconify-icon></i></a> 
+        <a href="https://linktr.ee/sasepsu"
+          ><iconify-icon icon="simple-icons:linktree"></iconify-icon></a>
+        <a href="https://groupme.com/join_group/108601132/G7XwUsge"
+          ><iconify-icon icon="simple-icons:groupme"></iconify-icon></i></a>
+        <a href="https://www.tiktok.com/@sase.psu"
+          ><iconify-icon icon="simple-icons:tiktok"></iconify-icon></i></a>
+      </div>
+      <a href="index.html"><img src="images/sase-logo.png" alt=""> </a> 
+      <br><br>
+      <p>Society of Asian Scientists and Engineers © <script>document.write( new Date().getFullYear() );</script> </iconify-icon></p>
+      
+    </footer>
+    <!-- Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
