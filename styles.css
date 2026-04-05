@@ -1,0 +1,922 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+hr {
+    border: 0.8px solid rgb(211, 211, 211);
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+a:visited {
+    text-decoration: none;
+}
+
+.logo {
+    width: 150px;
+    margin: 5%;
+}
+
+.navbar-collapse {
+    margin-left: 40px;
+}
+
+.nav-item {
+    font-size: 1.15rem;
+    margin-right: 10px;
+}
+
+.hero {
+    background-image: url('images/hero.png'); 
+    object-fit: cover;
+    width: 100%;
+}
+
+.container {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgb(223, 223, 223);
+}
+
+figure {
+    margin: 16px 40px;
+}
+
+.about-section {
+    background-color: rgb(243, 243, 243);
+    padding: 5% 0;
+}
+
+.about-div {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+/* Leaderboard */
+
+.leaderboard-title h4 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.leaderboard {
+    width: 100%;
+    background-color: rgb(228, 228, 228);
+    padding: 3%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.list-item {
+    margin: 10px 0;
+    width: 100%;
+    background-color: #494949;
+}
+
+.list-item:hover {
+    background-color: #2c2c2c;
+}
+
+.list-item div {
+    display: inline-block;
+}
+
+.leader-name {
+    width: 70%;
+    padding: 5px;
+    color: white;
+    padding-left: 20px;
+}
+
+.leader-score {
+    width: 15%;
+    padding: 5px;
+    margin-left: 5%;
+    color: white;
+}
+
+.leader-score p {
+    margin: auto;
+    text-align: center;
+}
+
+/* Event Showcase */
+
+.event-holder {
+    width: 100%;
+    background-color: white;
+    padding: 30px;
+    filter: drop-shadow(30px 20px 4px #c5c5c5);
+}
+
+.event-image {
+    width: 90%;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    border: 2px rgb(201, 201, 201) solid;
+}
+
+.event-details {
+    width: 100%;
+    background-color: white;
+    padding-top: 20px;
+    justify-content: center;
+    display:flex;
+    font-family: 'Indie Flower', cursive;
+    color: black;
+    text-align: center;
+}
+
+.event-details:hover {
+    color:#464646;
+}
+
+.event-details h4 {
+    text-align: center;
+}
+
+/* About banner */
+
+.about2-section {
+    width: 100%;
+    background-color: #0e6bb6;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.info-div h1 {
+    color: #a2c976;
+}
+
+.info-div p {
+    font-size: 1.3rem;
+    margin: 20px;
+    color: white;
+}
+
+.conference-photo {
+    width: 40%;
+    height: 30%;
+    margin-left: 5%;
+    border-radius: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Sponsor section */
+
+.sponsor-title {
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+    padding: 30px;
+    
+}
+
+.sponsor-title h1 {
+    text-align: center;
+}
+
+.sponsor-section {
+    width: 100%;
+    display: flex;
+}
+
+.carousel-div {
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+}
+
+.carousel-img {
+    margin: auto;
+    height:200px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.sponsor-info-div {
+    width: 40%;
+    background-color: #494949;
+    padding: 4%;
+    color: white;
+}
+
+.sponsor-info-div p, .sponsor-info-div a {
+    font-size: 1.2rem;
+}
+
+/* Contact section */
+
+.contact-section {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(243, 243, 243);
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.signup-div {
+    padding: 5%;
+    display: flex;
+    width: 60%;
+}
+
+.signup-div-img {
+    width: 40%;
+    overflow-x: hidden;
+}
+
+.signup-div div {
+    margin-right: 5%;
+}
+
+.qr-img {
+    border: 5px solid black;
+    height:150px;
+    width: 150px;
+}
+
+.newsletter .content {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+}
+
+.newsletter .content h2 {
+    color: #252525;
+    margin-bottom: 40px;
+}
+
+.newsletter .content .form-control {
+    height: 50px;
+    border-color: #ffffff;
+    border-radius: 0;
+}
+
+.newsletter .content.form-control:focus {
+    box-shadow: none;
+    border: 2px solid #243c4f;
+}
+
+.newsletter .content .btn {
+    min-height: 50px;
+    border-radius: 0;
+    background: #464646;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    color: #2e87cf;
+    background-color: #243c4f;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a{
+    font-size: 50px;
+    margin: 0 5px;
+    color: #98c95f;
+}
+
+footer a:hover {
+    color: #d3d3d3;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+footer a img {
+    width: 200px;
+}
+
+
+/* Executive Board Page */
+
+.side-hero {
+    width: 100%;
+    background-color: #2d4f78;
+    align-items: center;
+    padding: 5%;
+}
+
+.side-hero h1 {
+    color: #79b1ff;
+    font-size: 3rem;
+}
+
+.exec-page {
+    background-color: #f1f1f1;
+}
+
+.team-card {
+    margin-bottom: 5%;
+}
+
+.ourTeam-box {
+    border-radius: 2px;
+    border-top: 6px solid #424665;
+    margin: 0px;
+    background-color: #FFFFFF;
+    margin-bottom: 30px;
+    color: #424665;
+    line-height: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.exec-alt-border {
+    border-top: 6px solid #90DFAA;
+}
+
+.section1 {
+    padding: 30px 0px 30px 0px;
+}
+
+.section1 img {
+    /* border-radius: 50%; */
+    width: 90%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.section2 h5 {
+    color: #5c5f73;
+}
+
+.section2 p {
+    font-size: 1rem;
+    color: gray;
+}
+
+.section2 a {
+    line-height: 1;
+}
+.section2 h3{
+    font-size: 1.6rem;
+}
+
+.section3 {
+    background-color: #424665;
+    height: 20px;
+}
+
+.section3-alt {
+    background-color: #90DFAA;
+}
+
+.exec-icon {
+    color: black;
+    font-size: 1.5rem;
+}
+
+
+/* Conference Page */
+
+
+.carousel-conference-item {
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.conference-image-holder {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.carousel-conference-img {
+    height: 180px;
+    width: 180px;
+    margin: 5%;
+    border-radius: 50%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.testimonial-div {
+    padding: 5%;
+    width: 60%;
+}
+
+.about-conference {
+    padding: 5%;
+}
+
+.about-conference-div {
+    display: flex;
+}
+
+.about-conference-div div{
+    width: 50%;
+    margin-right: 5%;
+}
+
+.about-conference-div h4 {
+    margin-right: 100px;
+    font-weight: 400;
+}
+
+iframe {
+    width: 45%;
+}
+
+/* Features */
+
+.conference-features-section {
+    background-color: rgb(208, 227, 255);
+    padding: 5%;
+}
+
+.side-hero h4 {
+    color: rgb(238, 236, 236);
+}
+
+.conference-features-div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.conference-features-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.conference-features-div div {
+    width: 30%;
+    text-align: center;
+}
+
+.conference-features-div div p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.conference-gallery-section {
+    padding: 5%;
+}
+
+.conference-gallery {
+    background-color: white;
+    display: inline-block;
+    border: white 10px solid;
+    text-align: center;
+}
+
+.conference-image {
+    height: 250px;
+    margin: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.conference-button-holder {
+    text-align: center;
+    background-color: white;
+    padding: 25px;
+}
+
+.conference-button {
+    background-color: #243c4f;
+    color: white;
+}
+
+.conference-status-div-active {
+    padding: 5px 40px;
+    background-color: rgb(199, 255, 199);
+    font-size: 1.2rem;
+}
+
+.conference-status-div-closed {
+    padding: 5px 40px;
+    background-color: rgb(255, 201, 199);
+    font-size: 1.2rem;
+}
+
+/* Gallery Page */
+
+.gallery-section {
+    display: flex;
+}
+
+.semHeader {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.gallery-box {
+    border-radius: 2px;
+    height: 500px;
+    margin: 0px;
+    background-color: #FFFFFF;
+    margin-bottom: 30px;
+    color: #000000;
+    line-height: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.event-desc {
+    font-family: 'Indie Flower', cursive;
+}
+
+.gallery-img {
+    width:  300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 10% 0;
+}
+
+.photocircle-div {
+    padding: 10px 25px;
+    background-color: #ffffff;
+    text-align: center;
+}
+/* FAQ Page */
+
+.faq-section {
+    margin: 5% 10%;
+}
+
+.accordion-button {
+    font-size: 1.2rem;
+}
+
+/* Upcoming Events Page */
+.events-section {
+    text-align: center;
+    background-color: white;
+}
+
+.calendar {
+    border: solid 2px #293057;
+    width: 90%;
+    height: 600px;
+    margin: 5% 0 0 0;
+}
+
+
+/* SASE COMMONWEALTH */
+
+.commonwealth-about {
+    background-color: white;
+    padding: 5%;
+}
+
+.connect-box {
+    padding: 3%;
+    margin: 2.5% 5% 2.5% 5%;
+    border-radius: 2px;
+    border-left: 6px solid #424665;
+    background-color: #FFFFFF;
+    color: #424665;
+    line-height: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.connect-box img {
+    height: 200px;
+
+}
+
+.connect-box div {
+    margin-left: 3%;
+}
+
+/* General Media Queries */
+
+@media only screen and (max-width: 1450px) {
+    .signup-div-img {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 5%;
+    }
+   
+    .mq-center-text {
+        text-align: center;
+    }
+
+    .info-div p {
+        font-size: 1rem;
+    }
+
+    .about2-section {
+        display: flex;
+        align-items: center;
+    }
+
+    .carousel-img {
+        height: 180px;
+    }
+
+    .sponsor-info-div p, .sponsor-info-div a {
+        font-size: 1rem;
+    }
+
+    .contact-section {
+        display: flex;
+    }
+
+    .signup-div {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .qr-img {
+        height: 200px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    .about-section {
+        padding: 0;
+    }
+
+    .sponsor-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sponsor-info-div {
+        width: 100%;
+        padding: 40px;
+    }
+
+    .carousel-div {
+        width: 100%;
+        padding: 5% 0;
+    }
+
+    .about2-section {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .conference-photo {
+        width: 90%;
+        margin: 20px 0;
+    }
+
+    .side-hero {
+        text-align: center;
+    }
+
+    .side-hero h4 {
+        text-align: center;
+    }
+
+    .conference-status-div-active, .conference-status-div-closed {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .about-conference-div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-conference-div div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-conference-div div h4 {
+        margin: 3% auto;
+    }
+
+    .about-conference-div a {
+        font-size: 1.2rem;
+    }
+
+    .about-conference-div iframe {
+        width: 100%;
+        height: 400px;
+    }
+
+    .conference-features-div {
+        flex-direction: column;
+    }
+
+    .conference-features-div div {
+        width: 100%;
+    }
+
+    .conference-features-div div p {
+        font-size: 1rem;
+        margin: 0px 50px 50px 50px;
+    }
+
+    .commonwealth-about h2 {
+        font-size: 1.8rem;
+    }
+
+    .connect-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .connect-box p {
+        font-size: 1rem;
+    }
+
+    .event-desc {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .contact-section {
+        margin: 20px 0;
+    }
+   
+    .signup-div {
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+   }
+
+   .qr-img {
+    margin-top: 20px;
+   }
+
+   .carousel-img {
+    height: 150px;
+   }
+
+   .side-hero h1 {
+    font-size: 2rem;
+   }
+
+   .side-hero {
+    text-align: center;
+   }
+
+   .connect-box {
+    flex-direction: column;
+    border: none;
+    border-top: 6px solid #424665;
+    border-bottom: 30px solid #424665;
+    margin-bottom: 5%;
+   }
+
+   .connect-box img {
+    width: 90%;
+    height: 90%;
+    padding: 5% 0;
+   }
+
+   .connect-box h3 {
+    font-size: 1.5rem;
+    text-align: center;
+   }
+
+   .connect-box div {
+    margin: 5px;
+    text-align: center;
+   }
+}
+
+@media only screen and (max-width: 480px) {
+    .conference-status-div-active,
+        .conference-status-div-closed {
+            font-size: 0.7rem;
+            text-align: center;
+            padding: 0%;
+        }
+
+    .conference-image-holder {
+        flex-direction: column-reverse;
+    }
+
+    .conference-image-holder img {
+        width: 80px;
+        height: 80px;
+        margin: 20px auto;
+    }
+
+    .testimonial-div {
+        margin: auto;
+        width: 90%;
+        text-align: center;
+    }
+
+    .testimonial-div h4 {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-div p {
+        font-size: 0.8rem;
+    }
+
+    .testimonial-div br {
+        display: none;
+    }
+
+    .about-conference-div div h4 {
+        margin: auto;
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .about-conference-div a {
+        font-size: 1rem;
+    }
+
+    .about-conference-div iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    .conference-features-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .conference-features-div h3 {
+        font-size: 1.2rem;
+    }
+
+    .conference-features-div div p {
+        font-size: 0.8rem;
+        margin: 0 0 20px 0;
+    }
+
+    .conference-gallery-section h1 {
+        text-align: center;
+    }
+
+    .conference-image {
+        height: 150px;
+        margin: 2px;
+    }
+
+    .commonwealth-about h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .commonwealth-about h4 {
+        font-weight: lighter;
+        text-align: center;
+    }
+
+    .connect-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .connect-box p {
+        font-size: 0.8rem;
+    }
+}
