@@ -291,7 +291,7 @@ figure {
 
 /* Footer */
 
-image-box{
+.image-box{
     width:100%;
     background-color: #D0D0CE;
     align-items: center;
