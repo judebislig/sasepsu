@@ -293,8 +293,8 @@ figure {
 
 footer {
     width: 100%;
-    color: #2e87cf;
-    background-color: #243c4f;
+    color: #E9E8E8;
+    background-color: #3F4444;
     align-items: center;
     text-align: center;
     padding: 20px;
@@ -303,11 +303,11 @@ footer {
 footer a{
     font-size: 50px;
     margin: 0 5px;
-    color: #98c95f;
+    color: #DBC8B6;
 }
 
 footer a:hover {
-    color: #d3d3d3;
+    color: #E9E8E8;
 }
 
 .icon {
