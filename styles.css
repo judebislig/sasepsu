@@ -155,20 +155,20 @@ figure {
 
 .about2-section {
     width: 100%;
-    background-color: #0e6bb6;
+    background-color: #101820;
     padding: 5%;
     display: flex;
     align-items: center;
 }
 
 .info-div h1 {
-    color: #a2c976;
+    color: #D0D0CE;
 }
 
 .info-div p {
     font-size: 1.3rem;
     margin: 20px;
-    color: white;
+    color: #E9E8E8;
 }
 
 .conference-photo {
