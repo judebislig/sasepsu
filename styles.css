@@ -291,12 +291,6 @@ figure {
 
 /* Footer */
 
-.image-box{
-    width:200px;
-    background-color: #D0D0CE;
-    border-radius: 2.5em;
-    align-items: center;
-}
 footer {
     width: 100%;
     color: #E9E8E8;
