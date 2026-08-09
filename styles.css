@@ -218,7 +218,7 @@ figure {
 
 .sponsor-info-div {
     width: 40%;
-    background-color: #494949;
+    background-color: #3f4444;
     padding: 4%;
     color: white;
 }
@@ -291,6 +291,13 @@ figure {
 
 /* Footer */
 
+image-box{
+    width:100%;
+    background-color: #D0D0CE;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
 footer {
     width: 100%;
     color: #E9E8E8;
