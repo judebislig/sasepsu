@@ -344,7 +344,7 @@ footer a img {
 
 .ourTeam-box {
     border-radius: 2px;
-    border-top: 6px solid #424665;
+    border-top: 6px solid #141B4D;
     margin: 0px;
     background-color: #FFFFFF;
     margin-bottom: 30px;
@@ -354,7 +354,7 @@ footer a img {
 }
 
 .exec-alt-border {
-    border-top: 6px solid #90DFAA;
+    border-top: 6px solid #89ADE3;
 }
 
 .section1 {
@@ -452,7 +452,7 @@ iframe {
 /* Features */
 
 .conference-features-section {
-    background-color: rgb(208, 227, 255);
+    background-color: #ACA39A;
     padding: 5%;
 }
 
