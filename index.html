@@ -39,75 +39,140 @@
         updateLeaderboard();
       };
 
-      const SHEETDB_URL = 'https://sheetdb.io/api/v1/afruio9ehuk8a'
-      const SHEETDB_URL_BACKUP = 'https://sheetdb.io/api/v1/w9t0580cynuvn'
+      const SHEETDB_URL = 'https://sheetdb.io/api/v1/afruio9ehuk8a';
+      const SHEETDB_URL_BACKUP = 'https://sheetdb.io/api/v1/w9t0580cynuvn';
+      const GOOGLE_SHEET_URL = 'https://docs.google.com/spreadsheets/d/1lo8iBNVNJQqgpm5kQ6R5zC1L7jwG7bWO7r-1WDCq09s/export?format=csv&gid=0';
 
       async function updateLeaderboard() {
         try {
-          await fetchAndUpdateLeaderboard(SHEETDB_URL);
+          await fetchAndUpdateLeaderboard(GOOGLE_SHEET_URL, 'csv');
         } catch (error) {
-          console.error('Error fetching primary data:', error);
+          console.error('Error fetching Google Sheet data:', error);
           try {
-            await fetchAndUpdateLeaderboard(SHEETDB_URL_BACKUP);
+            await fetchAndUpdateLeaderboard(SHEETDB_URL, 'json');
           } catch (backupError) {
             console.error('Error fetching backup data:', backupError);
           }
         }
       }
 
-      async function fetchAndUpdateLeaderboard(url) {
+      async function fetchAndUpdateLeaderboard(url, type = 'json') {
         try {
-            const response = await fetch(url);
-            if (!response.ok) throw new Error('Primary URL failed')
-            const data = await response.json();
+          const response = await fetch(url);
+          if (!response.ok) throw new Error('Data fetch failed');
 
-            const topMembers = findTopMembers(data);
-            console.log(topMembers)
+          const rawData = type === 'json' ? await response.json() : await response.text();
+          const members = type === 'json' ? rawData : parseCsv(rawData);
 
-            const leaderData = [
-              {year: '1st Year', name: topMembers["1st"]["First Name"] + ' ' + topMembers["1st"]["Last Name"], points: topMembers["1st"]["Point Count"]},
-              {year: '2nd Year', name: topMembers["2nd"]["First Name"] + ' ' + topMembers["2nd"]["Last Name"], points: topMembers["2nd"]["Point Count"]},
-              {year: '3rd Year', name: topMembers["3rd"]["First Name"] + ' ' + topMembers["3rd"]["Last Name"], points: topMembers["3rd"]["Point Count"]},
-              {year: '4th Year', name: topMembers["4th"]["First Name"] + ' ' + topMembers["4th"]["Last Name"], points: topMembers["4th"]["Point Count"]},
-            ];
-
-            leaderData.forEach((leader, index) => {
-              const leaderName = document.querySelector(`.list-item:nth-child(${index + 1}) .leader-name`);
-              const leaderScore = document.querySelector(`.list-item:nth-child(${index + 1}) .leader-score`);
-              leaderName.textContent = `${leader.year} - ${leader.name}`;
-              leaderScore.textContent = leader.points; 
-            });
-
+          const leaderboardData = buildGradeLeaderboard(members);
+          renderLeaderboard(leaderboardData);
         } catch (error) {
-            throw error;
+          throw error;
         }
-    }
-
-      function findTopMembers(data) {
-          const highestPointMembers = {};
-          const yearGroupedMembers = {};
-
-          data.forEach(member => {
-              const year = String(member["Year"]).trim();
-              if (year) {
-                  if (!yearGroupedMembers[year]) {
-                      yearGroupedMembers[year] = [];
-                  }
-                  yearGroupedMembers[year].push(member);
-              }
-          });
-
-          for (const year in yearGroupedMembers) {
-              const memberOfYear = yearGroupedMembers[year];
-              const highestPointMember = memberOfYear.reduce((prev, current) => {
-                  return (Number(current["Point Count"]) > Number(prev["Point Count"])) ? current : prev;
-              });
-              highestPointMembers[year] = highestPointMember;
-          }
-          return highestPointMembers;
       }
 
-    setInterval(updateLeaderboard, 43200000);
+      function parseCsv(csvText) {
+        const rows = [];
+        let row = [];
+        let current = '';
+        let inQuotes = false;
+
+        for (let i = 0; i < csvText.length; i++) {
+          const char = csvText[i];
+
+          if (char === '"') {
+            if (inQuotes && csvText[i + 1] === '"') {
+              current += '"';
+              i++;
+            } else {
+              inQuotes = !inQuotes;
+            }
+          } else if (char === ',' && !inQuotes) {
+            row.push(current);
+            current = '';
+          } else if ((char === '\n' || char === '\r') && !inQuotes) {
+            if (char === '\r' && csvText[i + 1] === '\n') i++;
+            row.push(current);
+            if (row.some(value => value.trim() !== '')) {
+              rows.push(row);
+            }
+            row = [];
+            current = '';
+          } else {
+            current += char;
+          }
+        }
+
+        if (current.length > 0 || row.length > 0) {
+          row.push(current);
+          if (row.some(value => value.trim() !== '')) {
+            rows.push(row);
+          }
+        }
+
+        if (rows.length < 2) return [];
+
+        const headers = rows[0].map(header => header.trim());
+        return rows.slice(1).map(rowData => {
+          const obj = {};
+          headers.forEach((header, index) => {
+            obj[header] = (rowData[index] || '').trim();
+          });
+          return obj;
+        });
+      }
+
+      function buildGradeLeaderboard(data) {
+        const grouped = {};
+
+        data.forEach(member => {
+          const year = String(member.Year || '').trim();
+          const firstName = String(member['First Name'] || '').trim();
+          const lastName = String(member['Last Name'] || '').trim();
+          const points = Number(member['Point Count'] || 0);
+
+          if (!year || Number.isNaN(points)) return;
+
+          if (!grouped[year]) grouped[year] = [];
+          grouped[year].push({
+            name: `${firstName} ${lastName}`.trim() || 'Unknown Member',
+            points
+          });
+        });
+
+        const order = ['1st', '2nd', '3rd', '4th'];
+        return order.map(year => ({
+          year,
+          members: (grouped[year] || []).sort((a, b) => b.points - a.points).slice(0, 3)
+        }));
+      }
+
+      function renderLeaderboard(leaderboardData) {
+        const yearGroups = document.querySelectorAll('.grade-board');
+
+        yearGroups.forEach((group) => {
+          const yearKey = group.dataset.grade;
+          const gradeData = leaderboardData.find(entry => entry.year === yearKey);
+          const items = group.querySelectorAll('.list-item');
+
+          items.forEach((item, index) => {
+            const member = gradeData && gradeData.members[index];
+            const nameEl = item.querySelector('.leader-name');
+            const scoreEl = item.querySelector('.leader-score');
+
+            if (!member) {
+              item.style.display = 'none';
+              return;
+            }
+
+            item.style.display = 'flex';
+            if (nameEl) nameEl.textContent = `${index + 1}. ${member.name}`;
+            if (scoreEl) scoreEl.textContent = `${member.points.toLocaleString()} pts`;
+          });
+        });
+      }
+
+    setInterval(updateLeaderboard, 300000);
     </script>
 
   </head>
@@ -179,24 +244,83 @@
             <figure class="potoaboutwrap">
               <!-- Leadership Board -->
               <div class="leaderboard-title pb-3">
-                <h3 class="mq-center-text">LEADERSHIP BOARD</h3>
+                <h3 class="mq-center-text">Point Leader Board</h3>
               </div>
               <div class="leaderboard">
-                <div class="list-item">
-                  <div class="leader-name">Loading...</div>
-                  <div class="leader-score"><p>...</p></div>
+                <div class="grade-board" data-grade="1st">
+                  <div class="grade-header">1st Year</div>
+                  <div class="list-item">
+                    <div class="leader-rank">1</div>
+                    <div class="leader-name">Loading...</div>
+                    <div class="leader-score"><p>...</p></div>
+                  </div>
+                  <div class="list-item">
+                    <div class="leader-rank">2</div>
+                    <div class="leader-name">Loading...</div>
+                    <div class="leader-score"><p>...</p></div>
+                  </div>
+                  <div class="list-item">
+                    <div class="leader-rank">3</div>
+                    <div class="leader-name">Loading...</div>
+                    <div class="leader-score"><p>...</p></div>
+                  </div>
                 </div>
-                <div class="list-item">
-                  <div class="leader-name">Loading...</div>
-                  <div class="leader-score"><p>...</p></div>
+
+                <div class="grade-board" data-grade="2nd">
+                  <div class="grade-header">2nd Year</div>
+                  <div class="list-item">
+                    <div class="leader-rank">1</div>
+                    <div class="leader-name">Loading...</div>
+                    <div class="leader-score"><p>...</p></div>
+                  </div>
+                  <div class="list-item">
+                    <div class="leader-rank">2</div>
+                    <div class="leader-name">Loading...</div>
+                    <div class="leader-score"><p>...</p></div>
+                  </div>
+                  <div class="list-item">
+                    <div class="leader-rank">3</div>
+                    <div class="leader-name">Loading...</div>
+                    <div class="leader-score"><p>...</p></div>
+                  </div>
                 </div>
-                <div class="list-item">
-                  <div class="leader-name">Loading...</div>
-                  <div class="leader-score"><p>...</p></div>
+
+                <div class="grade-board" data-grade="3rd">
+                  <div class="grade-header">3rd Year</div>
+                  <div class="list-item">
+                    <div class="leader-rank">1</div>
+                    <div class="leader-name">Loading...</div>
+                    <div class="leader-score"><p>...</p></div>
+                  </div>
+                  <div class="list-item">
+                    <div class="leader-rank">2</div>
+                    <div class="leader-name">Loading...</div>
+                    <div class="leader-score"><p>...</p></div>
+                  </div>
+                  <div class="list-item">
+                    <div class="leader-rank">3</div>
+                    <div class="leader-name">Loading...</div>
+                    <div class="leader-score"><p>...</p></div>
+                  </div>
                 </div>
-                <div class="list-item">
-                  <div class="leader-name">Loading...</div>
-                  <div class="leader-score"><p>...</p></div>
+
+                <div class="grade-board" data-grade="4th">
+                  <div class="grade-header">4th Year</div>
+                  <div class="list-item">
+                    <div class="leader-rank">1</div>
+                    <div class="leader-name">Loading...</div>
+                    <div class="leader-score"><p>...</p></div>
+                  </div>
+                  <div class="list-item">
+                    <div class="leader-rank">2</div>
+                    <div class="leader-name">Loading...</div>
+                    <div class="leader-score"><p>...</p></div>
+                  </div>
+                  <div class="list-item">
+                    <div class="leader-rank">3</div>
+                    <div class="leader-name">Loading...</div>
+                    <div class="leader-score"><p>...</p></div>
+                  </div>
                 </div>
               </div>
 
