@@ -530,6 +530,23 @@ footer a img {
     width: 300px;
     height: 300px;
     object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.section1 img.jonathan-photo {
+    object-position: 50% 38%;
+}
+
+.section1 img.arooj-photo {
+    object-position: 50% 38%;
+}
+
+.section1 img.mariah-photo {
+    object-position: 50% 32%;
+}
+
+.section1 img.taiki-photo {
+    object-position: 50% 35%;
 }
 
 .section2 h5 {
@@ -554,7 +571,22 @@ footer a img {
 }
 
 .section3-alt {
-    background-color: #90DFAA;
+   background-color: #89ADE3;
+}
+
+.advisor-card .ourTeam-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.advisor-card .section1,
+.advisor-card .section3 {
+    flex: 0 0 auto;
+}
+
+.advisor-card .section2 {
+    flex: 1 0 auto;
 }
 
 .exec-icon {
