@@ -637,13 +637,15 @@ footer a img {
 
 .carousel-conference-item {
     background-color: rgb(255, 255, 255);
-    
+    min-height: 280px;
 }
 
 .conference-image-holder {
     display: flex;
     margin: auto;
     justify-content: center;
+    align-items: center;
+    max-width: 1100px;
 }
 
 .carousel-conference-img {
@@ -658,10 +660,25 @@ footer a img {
 .testimonial-div {
     padding: 5%;
     width: 60%;
+    color: var(--ink);
+}
+
+.testimonial-div h4 {
+    color: var(--navy-blue);
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    line-height: 1.45;
+}
+
+.testimonial-div .text-secondary {
+    color: var(--charcoal) !important;
+    font-size: 1rem;
 }
 
 .about-conference {
     padding: 5%;
+    background-color: var(--white);
+    border-top: 1px solid var(--panel-border);
+    border-bottom: 1px solid var(--panel-border);
 }
 
 .about-conference-div {
@@ -676,6 +693,8 @@ footer a img {
 .about-conference-div h4 {
     margin-right: 100px;
     font-weight: 400;
+    color: var(--ink);
+    line-height: 1.55;
 }
 
 iframe {
@@ -686,13 +705,34 @@ iframe {
     width: 45%;
     height: auto;
     object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(20, 27, 77, 0.16);
 }
 
 /* Features */
 
 .conference-features-section {
-    background-color: #ACA39A;
+    background: linear-gradient(135deg, var(--navy-blue) 0%, #1f2e63 100%);
     padding: 5%;
+}
+
+.conference-features-section h1,
+.conference-features-section h3 {
+    color: #ffffff;
+}
+
+.conference-features-section h3 {
+    margin-top: 0.25rem;
+}
+
+.conference-features-div div {
+    padding: 24px 16px;
+    border-radius: 12px;
+    color: #ffffff;
+}
+
+.conference-features-div div p {
+    color: #f1f4fb;
 }
 
 .side-hero h4 {
@@ -724,13 +764,15 @@ iframe {
 
 .conference-gallery-section {
     padding: 5%;
+    background-color: var(--stone-gray);
 }
 
 .conference-gallery {
-    background-color: white;
+    background-color: var(--white);
     display: inline-block;
-    border: white 10px solid;
+    border: var(--white) 10px solid;
     text-align: center;
+    border-radius: 12px;
 }
 
 .conference-image {
@@ -741,12 +783,12 @@ iframe {
 
 .conference-button-holder {
     text-align: center;
-    background-color: white;
+    background-color: var(--white);
     padding: 25px;
 }
 
 .conference-button {
-    background-color: #243c4f;
+    background-color: var(--navy-blue);
     color: white;
 }
 
