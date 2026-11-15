@@ -157,6 +157,44 @@ figure {
     margin-bottom: 0;
 }
 
+.point-leaderboard-grades {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.point-leaderboard .grade-board {
+    min-width: 0;
+    margin-bottom: 0;
+    padding: 10px 8px 6px;
+}
+
+.point-leaderboard .grade-header {
+    margin-bottom: 6px;
+}
+
+.point-leaderboard .list-item {
+    margin: 6px 0;
+}
+
+.point-leaderboard .leader-rank {
+    width: 28px;
+    min-width: 28px;
+    padding: 8px 4px;
+}
+
+.point-leaderboard .leader-name {
+    min-width: 0;
+    padding: 8px 5px;
+    font-size: 0.88rem;
+}
+
+.point-leaderboard .leader-score {
+    min-width: 68px;
+    padding: 8px 5px;
+    font-size: 0.85rem;
+}
+
 .grade-header {
     font-size: 0.85rem;
     font-weight: 700;
@@ -164,6 +202,12 @@ figure {
     text-transform: none;
     color: var(--navy-blue);
     margin: 0 0 10px;
+}
+
+@media (min-width: 992px) {
+    .point-leaderboard-grades {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 .list-item {
@@ -359,6 +403,29 @@ figure {
     width: 100%;
     display: flex;
     background: var(--stone-gray);
+}
+
+.mentorship-house-leaderboard {
+    margin-top: 20px;
+}
+
+.mentorship-house-leaderboard .leader-score {
+    min-width: 90px;
+}
+
+.mentorship-board-status {
+    margin: 10px 0 0;
+    color: #5c5f73;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.mentorship-board-link {
+    display: block;
+    margin-top: 8px;
+    color: var(--navy-blue);
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 .carousel-div {

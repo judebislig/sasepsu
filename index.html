@@ -37,11 +37,13 @@
     <script>
       window.onload = function() {
         updateLeaderboard();
+        updateMentorshipLeaderboard();
       };
 
       const SHEETDB_URL = 'https://sheetdb.io/api/v1/afruio9ehuk8a';
       const SHEETDB_URL_BACKUP = 'https://sheetdb.io/api/v1/w9t0580cynuvn';
       const GOOGLE_SHEET_URL = 'https://docs.google.com/spreadsheets/d/1lo8iBNVNJQqgpm5kQ6R5zC1L7jwG7bWO7r-1WDCq09s/export?format=csv&gid=0';
+      const MENTORSHIP_LEADERBOARD_URL = 'https://leaderboarded.com/api/ljzvthsgsnfzr/board/';
 
       async function updateLeaderboard() {
         try {
@@ -55,6 +57,59 @@
           }
         }
       }
+
+      async function updateMentorshipLeaderboard() {
+        const status = document.getElementById('mentorship-board-status');
+        const list = document.getElementById('mentorship-house-list');
+
+        try {
+          const response = await fetch(MENTORSHIP_LEADERBOARD_URL, {
+            cache: 'no-store'
+          });
+          if (!response.ok) {
+            throw new Error(`Leaderboard request failed: ${response.status}`);
+          }
+
+          const boardData = await response.json();
+          if (!Array.isArray(boardData.players)) {
+            throw new Error('Leaderboard response did not contain a player list');
+          }
+
+          const players = boardData.players.filter(player =>
+            player.is_visible !== false &&
+            typeof player.name === 'string' &&
+            Number.isFinite(Number(player.score))
+          );
+          list.replaceChildren(...players.map((player, index) => {
+            const item = document.createElement('div');
+            item.className = 'list-item';
+
+            const rank = document.createElement('div');
+            rank.className = 'leader-rank';
+            rank.textContent = String(index + 1);
+
+            const name = document.createElement('div');
+            name.className = 'leader-name';
+            name.textContent = player.name;
+
+            const score = document.createElement('div');
+            score.className = 'leader-score';
+            score.textContent = `${Number(player.score).toLocaleString()} pts`;
+
+            item.append(rank, name, score);
+            return item;
+          }));
+          status.textContent = `Updated ${new Date().toLocaleTimeString([], {
+            hour: 'numeric',
+            minute: '2-digit'
+          })}`;
+        } catch (error) {
+          console.error('Error fetching mentorship leaderboard:', error);
+          status.textContent = 'Leaderboard is temporarily unavailable.';
+        }
+      }
+
+      setInterval(updateMentorshipLeaderboard, 300000);
 
       async function fetchAndUpdateLeaderboard(url, type = 'json') {
         try {
@@ -242,93 +297,114 @@
                 <h4 class="event-details">10/03/2026 Seattle Convention Center</h4>
               </div>
             </div>
+
           </div>
 
           <!-- Right Side -->
           <div class="col-lg-6 mt-5 mt-lg-0">
             <figure class="potoaboutwrap">
               <!-- Leadership Board -->
-              <div class="leaderboard">
+              <div class="leaderboard point-leaderboard">
                 <div class="leaderboard-title">
                   <h3 class="mq-center-text">Point Leader Board</h3>
                 </div>
-                <div class="grade-board" data-grade="1st">
-                  <div class="grade-header">1st Year</div>
-                  <div class="list-item">
-                    <div class="leader-rank">1</div>
-                    <div class="leader-name">Loading...</div>
-                    <div class="leader-score"><p>...</p></div>
+                <div class="point-leaderboard-grades">
+                  <div class="grade-board" data-grade="1st">
+                    <div class="grade-header">1st Year</div>
+                    <div class="list-item">
+                      <div class="leader-rank">1</div>
+                      <div class="leader-name">Loading...</div>
+                      <div class="leader-score"><p>...</p></div>
+                    </div>
+                    <div class="list-item">
+                      <div class="leader-rank">2</div>
+                      <div class="leader-name">Loading...</div>
+                      <div class="leader-score"><p>...</p></div>
+                    </div>
+                    <div class="list-item">
+                      <div class="leader-rank">3</div>
+                      <div class="leader-name">Loading...</div>
+                      <div class="leader-score"><p>...</p></div>
+                    </div>
                   </div>
-                  <div class="list-item">
-                    <div class="leader-rank">2</div>
-                    <div class="leader-name">Loading...</div>
-                    <div class="leader-score"><p>...</p></div>
+                  <div class="grade-board" data-grade="2nd">
+                    <div class="grade-header">2nd Year</div>
+                    <div class="list-item">
+                      <div class="leader-rank">1</div>
+                      <div class="leader-name">Loading...</div>
+                      <div class="leader-score"><p>...</p></div>
+                    </div>
+                    <div class="list-item">
+                      <div class="leader-rank">2</div>
+                      <div class="leader-name">Loading...</div>
+                      <div class="leader-score"><p>...</p></div>
+                    </div>
+                    <div class="list-item">
+                      <div class="leader-rank">3</div>
+                      <div class="leader-name">Loading...</div>
+                      <div class="leader-score"><p>...</p></div>
+                    </div>
                   </div>
-                  <div class="list-item">
-                    <div class="leader-rank">3</div>
-                    <div class="leader-name">Loading...</div>
-                    <div class="leader-score"><p>...</p></div>
+                  <div class="grade-board" data-grade="3rd">
+                    <div class="grade-header">3rd Year</div>
+                    <div class="list-item">
+                      <div class="leader-rank">1</div>
+                      <div class="leader-name">Loading...</div>
+                      <div class="leader-score"><p>...</p></div>
+                    </div>
+                    <div class="list-item">
+                      <div class="leader-rank">2</div>
+                      <div class="leader-name">Loading...</div>
+                      <div class="leader-score"><p>...</p></div>
+                    </div>
+                    <div class="list-item">
+                      <div class="leader-rank">3</div>
+                      <div class="leader-name">Loading...</div>
+                      <div class="leader-score"><p>...</p></div>
+                    </div>
                   </div>
-                </div>
-
-                <div class="grade-board" data-grade="2nd">
-                  <div class="grade-header">2nd Year</div>
-                  <div class="list-item">
-                    <div class="leader-rank">1</div>
-                    <div class="leader-name">Loading...</div>
-                    <div class="leader-score"><p>...</p></div>
-                  </div>
-                  <div class="list-item">
-                    <div class="leader-rank">2</div>
-                    <div class="leader-name">Loading...</div>
-                    <div class="leader-score"><p>...</p></div>
-                  </div>
-                  <div class="list-item">
-                    <div class="leader-rank">3</div>
-                    <div class="leader-name">Loading...</div>
-                    <div class="leader-score"><p>...</p></div>
-                  </div>
-                </div>
-
-                <div class="grade-board" data-grade="3rd">
-                  <div class="grade-header">3rd Year</div>
-                  <div class="list-item">
-                    <div class="leader-rank">1</div>
-                    <div class="leader-name">Loading...</div>
-                    <div class="leader-score"><p>...</p></div>
-                  </div>
-                  <div class="list-item">
-                    <div class="leader-rank">2</div>
-                    <div class="leader-name">Loading...</div>
-                    <div class="leader-score"><p>...</p></div>
-                  </div>
-                  <div class="list-item">
-                    <div class="leader-rank">3</div>
-                    <div class="leader-name">Loading...</div>
-                    <div class="leader-score"><p>...</p></div>
-                  </div>
-                </div>
-
-                <div class="grade-board" data-grade="4th">
-                  <div class="grade-header">4th Year</div>
-                  <div class="list-item">
-                    <div class="leader-rank">1</div>
-                    <div class="leader-name">Loading...</div>
-                    <div class="leader-score"><p>...</p></div>
-                  </div>
-                  <div class="list-item">
-                    <div class="leader-rank">2</div>
-                    <div class="leader-name">Loading...</div>
-                    <div class="leader-score"><p>...</p></div>
-                  </div>
-                  <div class="list-item">
-                    <div class="leader-rank">3</div>
-                    <div class="leader-name">Loading...</div>
-                    <div class="leader-score"><p>...</p></div>
+                  <div class="grade-board" data-grade="4th">
+                    <div class="grade-header">4th Year</div>
+                    <div class="list-item">
+                      <div class="leader-rank">1</div>
+                      <div class="leader-name">Loading...</div>
+                      <div class="leader-score"><p>...</p></div>
+                    </div>
+                    <div class="list-item">
+                      <div class="leader-rank">2</div>
+                      <div class="leader-name">Loading...</div>
+                      <div class="leader-score"><p>...</p></div>
+                    </div>
+                    <div class="list-item">
+                      <div class="leader-rank">3</div>
+                      <div class="leader-name">Loading...</div>
+                      <div class="leader-score"><p>...</p></div>
+                    </div>
                   </div>
                 </div>
               </div>
 
+              <div class="leaderboard mentorship-house-leaderboard">
+                <div class="leaderboard-title">
+                  <h3 class="mq-center-text">Mentorship House Leader Board</h3>
+                </div>
+                <div
+                  id="mentorship-house-list"
+                  class="mentorship-house-list"
+                  aria-live="polite"
+                ></div>
+                <p id="mentorship-board-status" class="mentorship-board-status" role="status">
+                  Loading leaderboard...
+                </p>
+                <a
+                  class="mentorship-board-link"
+                  href="https://leaderboarded.com/board/ljzvthsgsnfzr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open full leaderboard
+                </a>
+              </div>
             </figure>
           </div>
         </div>
